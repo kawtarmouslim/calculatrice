@@ -37,7 +37,7 @@ public class Main {
             return 0;
     }
 
-    public static double puissance(double a,int b){
+    public static double puissance(double a,double b){
         return  Math.pow(a, b);
     }
     public static double racineCarree(double a) {
@@ -48,7 +48,8 @@ public class Main {
         return Math.sqrt(a);
     }
     public static long factorielle(int a) {
-        if (a == 0 || a == 1) return 1;
+        if (a == 0 || a == 1)
+            return 1;
         return a * factorielle(a - 1);
     }
     public static void main(String[] args) {
@@ -67,8 +68,28 @@ public class Main {
                     double[] num2 = demande_deux_nombre(sc);
                     System.out.println("Résultat : " + substraction(num2[0], num2[1]));
                     break;
-
-
+                case 3:
+                    double[]num3=demande_deux_nombre(sc);
+                    System.out.println("Résultat :" + multiplication(num3[0],num3[1]));
+                    break;
+                case 4:
+                    double[]num4=demande_deux_nombre(sc);
+                    System.out.println("Résultat :"+ division(num4[0],num4[1]));
+                    break;
+                case 5:
+                    double[]num5=demande_deux_nombre(sc);
+                    System.out.println("Résultat :"+ puissance(num5[0],num5[1]));
+                    break;
+                case 6:
+                    System.out.println("enter le nombre");
+                    double a= sc.nextDouble();
+                    System.out.println("Résultat :" +racineCarree(a));
+                    break;
+                case 7:
+                    System.out.println("enter le nombre");
+                    int b= sc.nextInt();
+                    System.out.println("Résultat :" +factorielle(b));
+                    break;
             }
         }
     }
