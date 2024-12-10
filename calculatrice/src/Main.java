@@ -90,6 +90,8 @@ public class Main {
                     int b= sc.nextInt();
                     System.out.println("Résultat :" +factorielle(b));
                     break;
+                default:
+                    System.out.println("Le choix invalid");
             }
         }
     }
